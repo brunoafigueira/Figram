@@ -13,29 +13,31 @@ export default function Hero() {
           referrerPolicy="no-referrer"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-industrial-blue/80 to-transparent"></div>
-      </div>
-
+      </div>          
       <div className="container-custom relative z-10">
+        <span className="inline-block px-3 py-1 bg-polish-blue text-white text-xs font-bold uppercase tracking-widest rounded mb-6">
+            Especialistas em Revestimentos
+          </span>
         <motion.div
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
-          className="max-w-2xl text-white"
+          className="max-w-4xl text-white flex items-center gap-8"
         >
           <img 
             src="/logo_figram_dark_rgb.png" 
             alt="Figram Logo" 
-            className="h-16 md:h-20 w-auto mb-8"
+            className="h-16 md:h-60 w-auto flex-shrink-0"
           />
-          <span className="inline-block px-3 py-1 bg-polish-blue text-white text-xs font-bold uppercase tracking-widest rounded mb-6">
-            Especialistas em Revestimentos
-          </span>
-          <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
-            <span className="text-polish-blue">Figram</span> no seu Projeto.
-          </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light">
-            Especialistas em fulget cimentício, microcimento, concreto estampado e polimento de pisos. Transformamos superfícies brutas em obras de arte modernas e duráveis.
-          </p>
+
+          <div className="flex-1">
+            <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6 leading-tight">
+              <span className="text-polish-blue">Figram</span> no seu Projeto.
+            </h1>
+            <p className="text-lg md:text-xl text-gray-200 mb-10 leading-relaxed font-light">
+              Especialistas em fulget cimentício, microcimento, concreto estampado e polimento de pisos. Transformamos superfícies brutas em obras de arte modernas e duráveis.
+            </p>
+          </div>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#servicos" className="btn-primary flex items-center justify-center gap-2">
               Ver Serviços <ChevronRight className="w-4 h-4" />
