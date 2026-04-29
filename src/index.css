@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+@theme {
+  --color-industrial-blue: #1C3F71;
+  --color-steel-blue: #2A5BA8;
+  --color-polish-blue: #7AAFDB;
+  --color-graphite: #2C2C2A;
+  --color-concrete: #8A8E90;
+  --color-granilite: #F4F3F0;
+  
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-granilite text-graphite font-sans antialiased;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-industrial-blue text-white px-6 py-3 rounded-md font-medium transition-all hover:bg-steel-blue active:scale-95;
+  }
+
+  .section-padding {
+    @apply py-20 sm:py-32;
+  }
+}
