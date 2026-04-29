@@ -9,10 +9,11 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-8">
-              <Hammer className="w-8 h-8 text-industrial-blue" />
-              <span className="text-xl font-bold tracking-tighter text-industrial-blue">
-                FIGRAM
-              </span>
+              <img 
+                src="/logo_figram_light_rgb.png" 
+                alt="Figram Logo" 
+                className="h-12 w-auto"
+              />
             </div>
             <p className="text-concrete max-w-md leading-relaxed mb-8">
               Desde 2011 transformando espaços com excelência técnica e design moderno. Nossa missão é entregar superfícies que combinam durabilidade extrema com beleza estética refinada.

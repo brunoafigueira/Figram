@@ -25,10 +25,11 @@ export default function Navbar() {
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'}`}>
       <div className="container-custom flex justify-between items-center">
         <div className="flex items-center gap-2">
-          <Hammer className={`w-8 h-8 ${scrolled ? 'text-industrial-blue' : 'text-white'}`} />
-          <span className={`text-xl font-bold tracking-tighter ${scrolled ? 'text-industrial-blue' : 'text-white'}`}>
-            FIGRAM
-          </span>
+          <img 
+            src={scrolled ? "/logo_figram_light_rgb.png" : "/logo_figram_dark_rgb.png"} 
+            alt="Figram Logo" 
+            className="h-10 md:h-12 w-auto transition-all duration-300"
+          />
         </div>
 
         {/* Desktop Menu */}

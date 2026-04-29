@@ -22,6 +22,11 @@ export default function Hero() {
           transition={{ duration: 0.8 }}
           className="max-w-2xl text-white"
         >
+          <img 
+            src="/logo_figram_dark_rgb.png" 
+            alt="Figram Logo" 
+            className="h-16 md:h-20 w-auto mb-8"
+          />
           <span className="inline-block px-3 py-1 bg-polish-blue text-white text-xs font-bold uppercase tracking-widest rounded mb-6">
             Especialistas em Revestimentos
           </span>
