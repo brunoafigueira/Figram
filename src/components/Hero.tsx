@@ -72,7 +72,7 @@ export default function Hero() {
             items-center
             gap-15">
             <img 
-              src="/logo_figram_dark_rgb.png" 
+              src="logo_figram_dark_rgb.png" 
               alt="Figram Logo" 
               className="
                 h-40

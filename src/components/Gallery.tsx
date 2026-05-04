@@ -3,12 +3,12 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
-  { id: 1, category: 'Microcimento', title: 'Loft Industrial SP', images: ['/1.png', '/1_1.png', '/1_2.png', '/1_3.png'] },
-  { id: 2, category: 'Granilite', title: 'Cozinha Gourmet Luxo', images: ['/2.png', '/2_1.png', '/2_2.png', '/2_3.png'] },
-  { id: 3, category: 'Estampado', title: 'Área Externa Resort', images: ['/3.png', '/3_1.png', '/3_2.png', '/3_3.png'] },
-  { id: 4, category: 'Fulget', title: 'Borda de Piscina Residencial', images: ['/4.png', '/4_1.png', '/4_2.png', '/4_3.png'] },
-  { id: 5, category: 'Polimento', title: 'Galpão Logístico High-Tech', images: ['/5.png', '/5_1.png', '/5_2.png', '/5_3.png'] },
-  { id: 6, category: 'Microcimento', title: 'Banheiro Minimalista', images: ['/6.png', '/6_1.png', '/6_2.png', '/6_3.png'] },
+  { id: 1, category: 'Microcimento', title: 'Loft Industrial SP', images: ['1.png', '1_1.png', '1_2.png', '1_3.png'] },
+  { id: 2, category: 'Granilite', title: 'Cozinha Gourmet Luxo', images: ['2.png', '2_1.png', '2_2.png', '2_3.png'] },
+  { id: 3, category: 'Estampado', title: 'Área Externa Resort', images: ['3.png', '3_1.png', '3_2.png', '3_3.png'] },
+  { id: 4, category: 'Fulget', title: 'Borda de Piscina Residencial', images: ['4.png', '4_1.png', '4_2.png', '4_3.png'] },
+  { id: 5, category: 'Polimento', title: 'Galpão Logístico High-Tech', images: ['5.png', '5_1.png', '5_2.png', '5_3.png'] },
+  { id: 6, category: 'Microcimento', title: 'Banheiro Minimalista', images: ['6.png', '6_1.png', '6_2.png', '6_3.png'] },
 ];
 
 function ProjectCard({ project }: { project: typeof projects[0] }) {
