@@ -28,7 +28,7 @@ export default function Hero() {
         <div className="
           absolute
           inset-0
-          bg-gradient-to-r
+          bg-linear-to-r
           from-industrial-blue/80
           to-transparent"></div>
       </div>          
@@ -79,7 +79,7 @@ export default function Hero() {
                 md:h-40
                 lg:h-60
                 w-auto
-                flex-shrink-0"
+                shrink-0"
             />
             <h1 className="
               text-5xl

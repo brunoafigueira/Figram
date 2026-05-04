@@ -61,7 +61,7 @@ function ProjectCard({ project }: { project: typeof projects[0] }) {
         </button>
       </div>
 
-      <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 p-8 flex flex-col justify-end pointer-events-none z-10">
+      <div className="absolute inset-0 bg-linear-to-t from-graphite/90 via-graphite/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 p-8 flex flex-col justify-end pointer-events-none z-10">
         <span className="text-polish-blue text-xs font-bold uppercase tracking-widest mb-2 block transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
           {project.category}
         </span>
