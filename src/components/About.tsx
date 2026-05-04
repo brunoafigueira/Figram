@@ -16,7 +16,7 @@ export default function About() {
             </div>
             {/* Experience Badge */}
             <div className="absolute -bottom-10 -right-10 bg-industrial-blue text-white p-10 rounded-3xl shadow-2xl z-20 hidden md:block">
-              <div className="text-6xl font-black mb-2 tracking-tighter">15</div>
+              <div className="text-6xl font-black mb-2 tracking-tighter">40+</div>
               <div className="text-xs font-bold uppercase tracking-widest leading-tight">Anos de<br />Experiência</div>
             </div>
             
@@ -30,7 +30,7 @@ export default function About() {
               Tradição e Inovação em Revestimentos Cimentícios.
             </h3>
             <p className="text-lg text-concrete mb-8 leading-relaxed">
-              Fundada com o objetivo de elevar o padrão dos acabamentos em concreto, a <strong className="text-industrial-blue">Figram</strong> combina técnicas artesanais com tecnologia de ponta para entregar superfícies impecáveis.
+              Fundada com o objetivo de elevar o padrão dos acabamentos em cimento, a <strong className="text-industrial-blue">Figram</strong> combina técnicas artesanais com tecnologia de ponta para entregar superfícies impecáveis.
             </p>
 
             <div className="grid sm:grid-cols-2 gap-6 mb-10">

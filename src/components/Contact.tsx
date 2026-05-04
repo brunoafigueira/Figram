@@ -23,7 +23,7 @@ export default function Contact() {
         <div className="grid lg:grid-cols-2 gap-20">
           <div>
             <h2 className="text-sm font-bold text-polish-blue uppercase tracking-widest mb-4">Contato</h2>
-            <h3 className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Vamos construir algo incrível juntos.</h3>
+            <h3 className="text-4xl md:text-5xl font-extrabold mb-8 leading-tight">Vamos juntos construir algo incrível.</h3>
             <p className="text-lg text-white/70 mb-12 max-w-lg leading-relaxed">
               Solicite um orçamento personalizado para o seu projeto. Nossa equipe está pronta para tirar suas dúvidas e sugerir a melhor solução técnica.
             </p>
@@ -35,7 +35,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-white/50 uppercase font-bold tracking-widest">Telefone</p>
-                  <p className="text-xl font-medium">(11) 99999-9999</p>
+                  <p className="text-xl font-medium">(14) 99628-4710</p>
                 </div>
               </div>
               <div className="flex items-center gap-6 group">
@@ -44,7 +44,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-white/50 uppercase font-bold tracking-widest">E-mail</p>
-                  <p className="text-xl font-medium">contato@arquitetodoconcreto.com.br</p>
+                  <p className="text-xl font-medium">claudio.figram@gmail.com</p>
                 </div>
               </div>
               <div className="flex items-center gap-6 group">
@@ -53,7 +53,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="text-xs text-white/50 uppercase font-bold tracking-widest">Localização</p>
-                  <p className="text-xl font-medium">São Paulo, SP - Atendimento em todo o Brasil</p>
+                  <p className="text-xl font-medium">Santa Cruz do Rio Pardo - SP</p>
                 </div>
               </div>
             </div>

@@ -1,14 +1,78 @@
 import { motion } from 'motion/react';
 import { useState } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
-  { id: 1, category: 'Microcimento', title: 'Loft Industrial SP', image: 'https://images.unsplash.com/photo-1600607687940-4e5a994239b3?auto=format&fit=crop&q=80&w=800' },
-  { id: 2, category: 'Granilite', title: 'Cozinha Gourmet Luxo', image: 'https://images.unsplash.com/photo-1556912177-c54038c396ef?auto=format&fit=crop&q=80&w=800' },
-  { id: 3, category: 'Estampado', title: 'Área Externa Resort', image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800' },
-  { id: 4, category: 'Fulget', title: 'Borda de Piscina Residencial', image: 'https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&q=80&w=800' },
-  { id: 5, category: 'Polimento', title: 'Galpão Logístico High-Tech', image: 'https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&q=80&w=800' },
-  { id: 6, category: 'Microcimento', title: 'Banheiro Minimalista', image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?auto=format&fit=crop&q=80&w=800' },
+  { id: 1, category: 'Microcimento', title: 'Loft Industrial SP', images: ['/1.png', '/1_1.png', '/1_2.png', '/1_3.png'] },
+  { id: 2, category: 'Granilite', title: 'Cozinha Gourmet Luxo', images: ['/2.png', '/2_1.png', '/2_2.png', '/2_3.png'] },
+  { id: 3, category: 'Estampado', title: 'Área Externa Resort', images: ['/3.png', '/3_1.png', '/3_2.png', '/3_3.png'] },
+  { id: 4, category: 'Fulget', title: 'Borda de Piscina Residencial', images: ['/4.png', '/4_1.png', '/4_2.png', '/4_3.png'] },
+  { id: 5, category: 'Polimento', title: 'Galpão Logístico High-Tech', images: ['/5.png', '/5_1.png', '/5_2.png', '/5_3.png'] },
+  { id: 6, category: 'Microcimento', title: 'Banheiro Minimalista', images: ['/6.png', '/6_1.png', '/6_2.png', '/6_3.png'] },
 ];
+
+function ProjectCard({ project }: { project: typeof projects[0] }) {
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const nextImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImage((prev) => (prev + 1) % project.images.length);
+  };
+
+  const prevImage = (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    setCurrentImage((prev) => (prev - 1 + project.images.length) % project.images.length);
+  };
+
+  return (
+    <motion.div
+      layout
+      key={project.id}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={{ opacity: 1, scale: 1 }}
+      exit={{ opacity: 0, scale: 0.9 }}
+      transition={{ duration: 0.4 }}
+      className="relative group h-[400px] overflow-hidden rounded-2xl bg-gray-200"
+    >
+      <img
+        src={project.images[currentImage]}
+        alt={`${project.title} - Imagem ${currentImage + 1}`}
+        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+        referrerPolicy="no-referrer"
+      />
+      
+      {/* Navigation arrows */}
+      <div className="absolute inset-0 flex items-center justify-between p-3 opacity-0 group-hover:opacity-100 transition-opacity z-20 pointer-events-none">
+        <button 
+          onClick={prevImage}
+          className="pointer-events-auto p-1.5 rounded-full bg-black/40 text-white hover:bg-black/70 backdrop-blur-sm transition-all"
+          aria-label="Foto anterior"
+        >
+          <ChevronLeft size={24} />
+        </button>
+        <button 
+          onClick={nextImage}
+          className="pointer-events-auto p-1.5 rounded-full bg-black/40 text-white hover:bg-black/70 backdrop-blur-sm transition-all"
+          aria-label="Próxima foto"
+        >
+          <ChevronRight size={24} />
+        </button>
+      </div>
+
+      <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 p-8 flex flex-col justify-end pointer-events-none z-10">
+        <span className="text-polish-blue text-xs font-bold uppercase tracking-widest mb-2 block transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
+          {project.category}
+        </span>
+        <h3 className="text-white text-2xl font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+          {project.title}
+        </h3>
+        <div className="mt-4 w-12 h-1 bg-white rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+      </div>
+    </motion.div>
+  );
+}
 
 export default function Gallery() {
   const [filter, setFilter] = useState('Todos');
@@ -47,31 +111,7 @@ export default function Gallery() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredProjects.map((project) => (
-            <motion.div
-              layout
-              key={project.id}
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              exit={{ opacity: 0, scale: 0.9 }}
-              transition={{ duration: 0.4 }}
-              className="relative group h-[400px] overflow-hidden rounded-2xl bg-gray-200"
-            >
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                referrerPolicy="no-referrer"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-graphite/90 via-graphite/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 p-8 flex flex-col justify-end">
-                <span className="text-polish-blue text-xs font-bold uppercase tracking-widest mb-2 block transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
-                  {project.category}
-                </span>
-                <h3 className="text-white text-2xl font-bold transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500 delay-75">
-                  {project.title}
-                </h3>
-                <div className="mt-4 w-12 h-1 bg-white rounded-full transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-              </div>
-            </motion.div>
+            <ProjectCard key={project.id} project={project} />
           ))}
         </div>
       </div>

@@ -16,7 +16,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-concrete max-w-md leading-relaxed mb-8">
-              Desde 2011 transformando espaços com excelência técnica e design moderno. Nossa missão é entregar superfícies que combinam durabilidade extrema com beleza estética refinada.
+              Desde 1982 transformando espaços com excelência técnica e design moderno. Nossa missão é entregar superfícies que combinam durabilidade extrema com beleza estética refinada.
             </p>
           </div>
           
