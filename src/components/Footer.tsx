@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center gap-2 mb-8">
               <img 
-                src="logo_figram_light_rgb.png" 
+                src="logo_figram_light_hor_rgb.png" 
                 alt="Figram Logo" 
                 className="h-12 w-auto"
               />
