@@ -4,6 +4,14 @@ export default function About() {
   return (
     <section id="sobre" className="section-padding bg-white overflow-hidden">
       <div className="container-custom">
+        <div className="text-center max-w-3xl mx-auto mb-16">
+          <h2 className="text-sm font-bold text-polish-blue uppercase tracking-widest mb-4">Sobre Nós</h2>
+          <h3 className="text-4xl md:text-5xl font-extrabold text-graphite mb-6 transition-colors leading-tight">
+            Tradição e Inovação em Revestimentos Cimentícios.
+          </h3>
+          <div className="h-1.5 w-24 bg-industrial-blue mx-auto rounded-full"></div>
+        </div>
+
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl">
@@ -25,10 +33,6 @@ export default function About() {
           </div>
 
           <div className="text-graphite">
-            <h2 className="text-sm font-bold text-polish-blue uppercase tracking-widest mb-4">Sobre Nós</h2>
-            <h3 className="text-4xl md:text-5xl font-extrabold mb-8 transition-colors leading-tight">
-              Tradição e Inovação em Revestimentos Cimentícios.
-            </h3>
             <p className="text-lg text-concrete mb-8 leading-relaxed">
               Fundada com o objetivo de elevar o padrão dos acabamentos em cimento, a <strong className="text-industrial-blue">Figram</strong> combina técnicas artesanais com tecnologia de ponta para entregar superfícies impecáveis.
             </p>

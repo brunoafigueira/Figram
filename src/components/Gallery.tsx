@@ -3,12 +3,12 @@ import { useState } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const projects = [
-  { id: 1, category: 'Microcimento', title: 'Loft Industrial SP', images: ['1.png', '1_1.png', '1_2.png', '1_3.png'] },
-  { id: 2, category: 'Granilite', title: 'Cozinha Gourmet Luxo', images: ['2.png', '2_1.png', '2_2.png', '2_3.png'] },
-  { id: 3, category: 'Estampado', title: 'Área Externa Resort', images: ['3.png', '3_1.png', '3_2.png', '3_3.png'] },
-  { id: 4, category: 'Fulget', title: 'Borda de Piscina Residencial', images: ['4.png', '4_1.png', '4_2.png', '4_3.png'] },
-  { id: 5, category: 'Polimento', title: 'Galpão Logístico High-Tech', images: ['5.png', '5_1.png', '5_2.png', '5_3.png'] },
-  { id: 6, category: 'Microcimento', title: 'Banheiro Minimalista', images: ['6.png', '6_1.png', '6_2.png', '6_3.png'] },
+  { id: 1, category: 'Fulget', title: '', images: ['1.png', '1_1.png', '1_2.png', '1_3.png'] },
+  { id: 2, category: 'Granilite Drenante', title: '', images: ['2.png', '2_1.png', '2_2.png', '2_3.png'] },
+  { id: 3, category: 'Microcimento', title: '', images: ['3.png', '3_1.png', '3_2.png', '3_3.png'] },
+  { id: 4, category: 'Concreto Estampado', title: '', images: ['4.png', '4_1.png', '4_2.png', '4_3.png'] },
+  { id: 5, category: 'Pisos e Divisórias em Granilite', title: '', images: ['5.png', '5_1.png', '5_2.png', '5_3.png'] },
+  { id: 6, category: 'Polimento de Pisos em Concreto', title: '', images: ['6.png', '6_1.png', '6_2.png', '6_3.png'] },
 ];
 
 function ProjectCard({ project }: { project: typeof projects[0] }) {
@@ -86,13 +86,14 @@ export default function Gallery() {
   return (
     <section id="portfolio" className="section-padding bg-granilite">
       <div className="container-custom">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8 text-industrial-blue">
-          <div className="max-w-xl">
+        <div className="flex flex-col items-center text-center mb-16 gap-8 text-industrial-blue">
+          <div className="max-w-3xl mx-auto">
             <h2 className="text-sm font-bold text-polish-blue uppercase tracking-widest mb-4">Portfolio</h2>
-            <p className="text-4xl md:text-5xl font-extrabold text-graphite mb-0">Nossos Projetos de Destaque.</p>
+            <p className="text-4xl md:text-5xl font-extrabold text-graphite mb-6">Nossos Projetos de Destaque.</p>
+            <div className="h-1.5 w-24 bg-industrial-blue mx-auto rounded-full"></div>
           </div>
           
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap justify-center gap-2">
             {categories.map(cat => (
               <button
                 key={cat}

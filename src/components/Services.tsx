@@ -15,22 +15,22 @@ const services = [
   {
     title: 'Microcimento',
     description: 'Acabamento contínuo, moderno e sem juntas. Versátil para pisos, paredes e até mobiliário.',
-    image: '3.png'
+    image: 'microcimento.png'
   },
   {
     title: 'Concreto Estampado',
     description: 'Beleza da pedra ou madeira com a durabilidade do concreto. Perfeito para calçadas e garagens.',
-    image: '4.png'
+    image: 'cimentoestampado.png'
   },
   {
     title: 'Pisos e Divisórias em Granilite',
     description: 'Um clássico reinventado. Composto de pedras naturais e cimento, polido até atingir brilho intenso.',
-    image: '5.png'
+    image: 'divisoriagranilite.png'
   },
   {
     title: 'Polimento de Pisos em Concreto',
     description: 'Transformação de pisos industriais em superfícies espelhadas, densas e de fácil manutenção.',
-    image: '6.png'
+    image: "polimento.png"
   }
 ];
 

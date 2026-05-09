@@ -99,6 +99,7 @@ export default function Contact() {
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase tracking-wider text-concrete">Assunto / Serviço</label>
                 <select className="w-full bg-granilite border-none rounded-xl px-5 py-4 focus:ring-2 focus:ring-industrial-blue outline-none transition-all appearance-none">
+                  <option value="">Selecione</option>
                   <option>Microcimento</option>
                   <option>Fulget Cimentício</option>
                   <option>Concreto Estampado</option>
