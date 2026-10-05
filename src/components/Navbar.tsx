@@ -21,6 +21,8 @@ export default function Navbar() {
     { name: 'Contato', href: '#contato' },
   ];
 
+  const orcamentosUrl = 'https://orcamentos-figram.app-figram.workers.dev/';
+
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'}`}>
       <div className="container-custom flex justify-between items-center">
@@ -43,6 +45,14 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          <a
+            href={orcamentosUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={`py-2 px-5 text-sm font-medium rounded-md border transition-all hover:bg-polish-blue hover:border-polish-blue hover:text-white active:scale-95 ${scrolled ? 'border-industrial-blue text-industrial-blue' : 'border-white text-white'}`}
+          >
+            Orçamentos Online
+          </a>
           <a href="#contato" className="btn-primary py-2 px-5 text-sm">
             Fazer Orçamento
           </a>
@@ -74,6 +84,15 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
+          <a
+            href={orcamentosUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="w-11/12 text-center px-6 py-3 rounded-md font-medium border border-industrial-blue text-industrial-blue transition-all hover:bg-industrial-blue hover:text-white"
+            onClick={() => setIsOpen(false)}
+          >
+            Orçamentos Online
+          </a>
           <a
             href="#contato"
             className="btn-primary w-11/12 text-center"
